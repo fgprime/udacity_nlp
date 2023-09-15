@@ -43,11 +43,15 @@ As we now know that we cant buy happiness with money and there is no other short
 
   <script>
     // Check that service workers are supported
+    // Code from https://webpack.js.org/guides/progressive-web-application/
     if ('serviceWorker' in navigator) {
-      // Use the window load event to keep the page load performant
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
+     window.addEventListener('load', () => {
+       navigator.serviceWorker.register('/service-worker.js').then(registration => {
+         console.log('SW registered: ', registration);
+       }).catch(registrationError => {
+         console.log('SW registration failed: ', registrationError);
+       });
+     });
     }
   </script>
 </body>
