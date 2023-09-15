@@ -3,6 +3,8 @@ import {
   __RewireAPI__ as FormHandlerAPI,
 } from "../src/client/js/formHandler";
 
+import { analyzeText } from "../src/client/js/analyzeText";
+
 // Use jsdom to test dom changes
 import { JSDOM } from "jsdom";
 
@@ -54,8 +56,6 @@ describe("Testing the submit functionality", () => {
   });
 
   test("Testing the analyzeText() function", async () => {
-    const analyzeText = FormHandlerAPI.__get__("analyzeText");
-
     expect(analyzeText).toBeDefined();
 
     const result = await analyzeText(formData);
