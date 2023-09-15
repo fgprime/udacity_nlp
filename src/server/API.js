@@ -14,17 +14,15 @@ async function getMeaning(text) {
   queries.push(`txt=${encodeURIComponent(text)}`);
 
   const query = queries.join("&");
-  console.dir(query);
+
   const url = `${meaningcloudService}?${query}`;
   const response = await fetch(url, {});
   try {
     const data = await response.json();
-    console.dir(data);
+
     return data;
   } catch (error) {
     console.log("Error", error);
   }
-  console.log("Hallo");
-  return "HALLO";
 }
 module.exports = { getMeaning };
