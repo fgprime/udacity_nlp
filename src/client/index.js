@@ -1,3 +1,4 @@
+import { analyzeText } from "./js/analyzeText";
 import { handleSubmit } from "./js/formHandler";
 
 import "./styles/resets.scss";
@@ -6,4 +7,4 @@ import "./styles/form.scss";
 import "./styles/footer.scss";
 import "./styles/header.scss";
 
-export { handleSubmit };
+export { analyzeText, handleSubmit };

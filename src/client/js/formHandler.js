@@ -1,3 +1,5 @@
+import { analyzeText } from "./analyzeText";
+
 function showResults(data) {
   const root = document.getElementById("results");
 
@@ -19,22 +21,6 @@ function showResults(data) {
   container.appendChild(subjectivity);
 
   root.appendChild(container);
-}
-
-async function analyzeText(formData) {
-  return await fetch("http://localhost:8081/api", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((res) => {
-      return res.json();
-    })
-    .then(function (data) {
-      return data;
-    });
 }
 
 async function handleSubmit(event) {
