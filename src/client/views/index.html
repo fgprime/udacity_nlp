@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <!-- <link rel="stylesheet" href="/styles/resets.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/base.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/header.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/form.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/footer.css"> -->
+  <!-- <link rel="stylesheet" href="main.css"> -->
+</head>
+
+<body>
+
+  <header>
+    <div class="">
+      Logo
+    </div>
+    <div class="">
+      navigation
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Analyse mood of a given text</h1>
+      <form class="" onsubmit="return Client.handleSubmit(event)">
+        <label for="text">Text to analyse</label>
+        <textarea id="text" name="text" rows="" cols="">
+As we now know that we cant buy happiness with money and there is no other shortcut to happiness. It is something that you feel from within. In addition, true happiness comes from within yourself. Happiness is basically a state of mind. Moreover, it can only be achieved by being positive and avoiding any negative thought in mind. And if we look at the bright side of ourselves only then we can be happy.
+        </textarea>
+        <!-- <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name"> -->
+        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+          onsubmit="return handleSubmit(event)">
+      </form>
+      <section>
+
+        <section>
+          <strong>Results:</strong>
+          <div id="results"></div>
+        </section>
+  </main>
+
+  <footer>
+    <p>This is a footer</p>
+  </footer>
+
+  <script>
+    // Check that service workers are supported
+    // if ('serviceWorker' in navigator) {
+    //   // Use the window load event to keep the page load performant
+    //   window.addEventListener('load', () => {
+    //     navigator.serviceWorker.register('/service-worker.js');
+    //   });
+    // }
+  </script>
+</body>
+
+</html>

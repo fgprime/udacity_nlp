@@ -1,0 +1,19 @@
+form {
+  border: 1px solid #545454;
+  border-radius: 3px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 300px;
+  height: 300px;
+}
+
+input {
+  padding: 5px 20px;
+  width: 50%;
+  line-height: 16px;
+  margin: 10px 0;
+}
