@@ -4,12 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Test</title>
-  <!-- <link rel="stylesheet" href="/styles/resets.css"> -->
-  <!-- <link rel="stylesheet" href="/styles/base.css"> -->
-  <!-- <link rel="stylesheet" href="/styles/header.css"> -->
-  <!-- <link rel="stylesheet" href="/styles/form.css"> -->
-  <!-- <link rel="stylesheet" href="/styles/footer.css"> -->
-  <!-- <link rel="stylesheet" href="main.css"> -->
 </head>
 
 <body>
@@ -49,12 +43,12 @@ As we now know that we cant buy happiness with money and there is no other short
 
   <script>
     // Check that service workers are supported
-    // if ('serviceWorker' in navigator) {
-    //   // Use the window load event to keep the page load performant
-    //   window.addEventListener('load', () => {
-    //     navigator.serviceWorker.register('/service-worker.js');
-    //   });
-    // }
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
   </script>
 </body>
 
